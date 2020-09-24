@@ -1,0 +1,103 @@
+header {
+  background: var(--color-dark-gray);
+  height: 50px;
+  padding: 0 var(--content-padding-horizontal);
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  background: url(../imgs/logo.svg) no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  text-indent: -1000px;
+  overflow: hidden;
+  transition: opacity ease 400ms;
+}
+.logo:hover {
+  cursor: pointer;
+  opacity: 0.65;
+}
+.dropdown--trigger {
+  background: url(../imgs/menu.svg) no-repeat center;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+}
+.dropdown__content {
+  background: var(--color-dark-gray);
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.dropdown__content--item {
+  border-bottom: 4px solid transparent;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+}
+.dropdown__content a {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.dropdown__content--item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown--trigger {
+    display: none;
+  }
+  .dropdown__content {
+    position: relative;
+  }
+  .dropdown:hover .dropdown__content {
+    display: flex;
+  }
+  .dropdown ul {
+    display: flex;
+  }
+  .dropdown__content--item {
+    margin: 0 16px;
+  }
+  .dropdown__content--item a {
+    position: relative;
+    padding: 0 6px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .dropdown__content--item a:after {
+    content: "";
+    background: transparent;
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width ease 300ms;
+  }
+  .dropdown__content--item:last-child {
+    margin: 0 0 0 16px;
+  }
+  .dropdown__content--item:hover {
+    background: none;
+  }
+  .dropdown__content--item:hover a:after {
+    background: #fff;
+    width: 100%;
+  }
+}

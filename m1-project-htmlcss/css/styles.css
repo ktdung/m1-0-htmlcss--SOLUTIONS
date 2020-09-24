@@ -1,0 +1,12 @@
+@import 'css-reset.css';
+@import 'settings.css';
+@import 'typography.css';
+@import 'layout.css';
+@import 'header.css';
+@import 'banner.css';
+@import 'section-features.css';
+@import 'section-advantages.css';
+@import 'gallery.css';
+@import 'footer.css';
+
+/* CSS here :) */

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,600&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  color: var(--color-dark-gray);
+  text-align: center;
+  font-weight: 700;
+}
+
+p,
+li,
+a,
+label,
+input {
+  color: var(--color-dark-gray);
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 1.4em;
+}
+
+p.subtitle {
+  font-size: 16px;
+}
+
+label {
+  font-size: 14px;
+}
+
+.link {
+  transition: all ease 200ms;
+}
+.link:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+  p.subtitle {
+    font-size: 20px;
+  }
+}
